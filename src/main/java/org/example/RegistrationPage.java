@@ -49,20 +49,8 @@ public class RegistrationPage extends Utils{
         //click on register button
        // waitforclickable(By.id("register-button"),20);
         clickonElement(_clickonRegisterButton);
-
-
-
-
-
-
     }
 
-
-    public void verifyUserIsOnRegisterPage() {
-    }
-
-    public void userEntersRegistrtionDetails() {
-    }
 }
 
 
