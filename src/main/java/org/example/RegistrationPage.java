@@ -5,14 +5,14 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class RegistrationPage extends Utils{
-    static By _genderFemaleRadioButton=By.id("gender-female");
-    static By _firstnameField=By.id("Firstname");
-    static By _lastnameField=By.id("Lastname");
-    static By _emailField=By.id("Email");
-    static By _newsletterCheckbox=By.id("Newsletter");
-    static By _passwordField=By.id("Password");
-    static By _confirmPasswordField=By.id("ConfirmPassword");
-    static By _clickonRegisterButton=By.id("register_button");
+     By _genderFemaleRadioButton=By.id("gender-female");
+     By _firstnameField=By.id("FirstName");
+     By _lastnameField=By.id("LastName");
+     By _emailField=By.id("Email");
+     By _newsletterCheckbox=By.id("Newsletter");
+     By _passwordField=By.id("Password");
+     By _confirmPasswordField= By.id("ConfirmPassword");
+      By _clickonRegisterButton=By.id("register-button");
 
     //check if user is in register page
     public static void checkUserIsInRegisterPage() {
@@ -27,16 +27,16 @@ public class RegistrationPage extends Utils{
         //write user last name
         typeText(_lastnameField, "Patel");
         //select  date of birth
-        Select selectday = new Select(driver.findElement(By.name("Date of Birthday")));
+        Select selectday = new Select(driver.findElement(By.xpath("//select[@name='DateOfBirthDay']")));
         selectday.selectByValue("14");
         //select date of birth month
-        Select selectmonth = new Select(driver.findElement(By.name("Date of Month")));
+        Select selectmonth = new Select(driver.findElement(By.xpath("//select[@name='DateOfBirthMonth']")));
         selectmonth.selectByVisibleText("May");
         //select date of birth year
-        Select selectyear = new Select(driver.findElement(By.name("Date of Birthyear")));
+        Select selectyear = new Select(driver.findElement(By.xpath("//select[@name='DateOfBirthYear']")));
         selectyear.selectByVisibleText("1991");
         //enter email
-        String email = "unnatip145" + getCurrentTimeStamp() + "gmail.com";
+        String email = "unnatip145" + getCurrentTimeStamp() + "@gmail.com";
         typeText(_emailField, email);
         //Deselect newsletter checkbox
         clickonElement(_newsletterCheckbox);

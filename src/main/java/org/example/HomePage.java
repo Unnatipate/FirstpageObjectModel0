@@ -6,7 +6,7 @@ public class HomePage extends Utils {
 
 
         By _registerlink = By.linkText("Register");
-        By _computerMenu =By.xpath("//div@class=\"header-menu\"]/u1[1]/li[1]a[@href=\"computers\"]");
+        By _computerMenu =By.xpath("//div[@class=\"header-menu\"]/ul[1]/li[1]/a");
         By _detailsButton = By.xpath("//div[@class=\"buttons\"]a[@href=\"\nopcommerce-new-release\"]");
 
         public void clickonRegisterlink(){
