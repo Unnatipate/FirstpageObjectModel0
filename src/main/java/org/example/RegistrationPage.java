@@ -6,25 +6,26 @@ import org.testng.Assert;
 
 public class RegistrationPage extends Utils{
     static By _genderFemaleRadioButton=By.id("gender-female");
-    static By _firstname=By.id("Firstname");
-    static By _lastname=By.id("Lastname");
-    static By _email=By.id("Email");
+    static By _firstnameField=By.id("Firstname");
+    static By _lastnameField=By.id("Lastname");
+    static By _emailField=By.id("Email");
     static By _newsletterCheckbox=By.id("Newsletter");
-    static By _password=By.id("Password");
-    static By _confirmpassword=By.id("ConfirmPassword");
+    static By _passwordField=By.id("Password");
+    static By _confirmPasswordField=By.id("ConfirmPassword");
     static By _clickonRegisterButton=By.id("register_button");
 
     //check if user is in register page
-    public static void enterRegistrationDetails() {
+    public static void checkUserIsInRegisterPage() {
+
         Assert.assertTrue(driver.getCurrentUrl().contains("register"));
     }
     public void fillUserDetails() {
         //click on female radio button
         clickonElement(_genderFemaleRadioButton);
         //Enter firstname
-        typeText(_firstname, "Unnati");
+        typeText(_firstnameField, "Unnati");
         //write user last name
-        typeText(_lastname, "Patel");
+        typeText(_lastnameField, "Patel");
         //select  date of birth
         Select selectday = new Select(driver.findElement(By.name("Date of Birthday")));
         selectday.selectByValue("14");
@@ -36,13 +37,13 @@ public class RegistrationPage extends Utils{
         selectyear.selectByVisibleText("1991");
         //enter email
         String email = "unnatip145" + getCurrentTimeStamp() + "gmail.com";
-        typeText(_email, email);
+        typeText(_emailField, email);
         //Deselect newsletter checkbox
         clickonElement(_newsletterCheckbox);
         //enter user password
-        typeText(_password, "Unnati145");
+        typeText(_passwordField, "Unnati145");
         //enter user confirm password
-        typeText(_confirmpassword, "Unnati145");
+        typeText(_confirmPasswordField, "Unnati145");
 
     }
     public void clickOnRegisterButton(){

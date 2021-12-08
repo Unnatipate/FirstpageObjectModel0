@@ -13,12 +13,12 @@ public class NewReleasePage extends Utils{
         Assert.assertTrue(driver.getCurrentUrl().contains("nopcommerce-new-release"));
     }
 
-    public void checkTheCommentIsPostSuccesfully(){
+    public void checkTheCommentIsPostSuccessfully(){
         String actualResult=getTextFromElement(By.xpath("//div@class=\"result\"]"));
-        String expectedResult="News comment is succesfully added";
+        String expectedResult="News comment is successfully added";
         Assert.assertEquals(actualResult,expectedResult,"Error in posting the comment");
     }
-    public void fillcommentsection(){
+    public void fillCommentSection(){
         //enter title
         typeText(_titleTextField,"New comment");
         //enter comment

@@ -9,9 +9,9 @@ public class ProductEmailAFriendPage extends Utils {
     By _sendemail=By.name("Send email");
 
     public void checkUserIsOnTheProductEmailAFriendPage() {
-        Assert.assertTrue(driver.getCurrentUrl().contains("productemailafriend"));
+        Assert.assertTrue(driver.getCurrentUrl().contains("ProductEmailAFriend"));
     }
-    public void checkEmailsentSuccesfully(){
+    public void checkEmailSentSuccesfully(){
         String actualresult=getTextFromElement(By.xpath("//div[@class=\"result\"])"));
         String expectedResult="Your message has been sent";
 

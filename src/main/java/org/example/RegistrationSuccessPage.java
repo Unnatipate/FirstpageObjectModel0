@@ -5,7 +5,7 @@ import org.testng.Assert;
 
 public class RegistrationSuccessPage extends Utils{
     public void verifyUserIsOnRegisterSuccessPage(){
-        Assert.assertTrue(driver.getCurrentUrl().contains(""));
+        Assert.assertTrue(driver.getCurrentUrl().contains("verifyUserIsOnRegisterSuccessPage"));
 
     }
     public void verifyUserHasSuccesfullyRegisterd(){

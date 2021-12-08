@@ -18,14 +18,14 @@ public class TestSuite extends BaseTest{
     ProductEmailAFriendPage productEmailAFriendPage=new ProductEmailAFriendPage();
 
     @Test
-    public void verifyUserShouldBeAbleToRegisterSuccesfully(){
+    public void verifyUserShouldBeAbleToRegisterSuccessfully(){
         //click on register link
         homePage.clickonRegisterlink();
         //enter user details
-        registrationPage.verifyUserIsOnRegisterPage();
         registrationPage.fillUserDetails();
-        registrationPage.clickOnRegisterButton();
+        registrationPage.checkUserIsInRegisterPage();
         registrationSuccessPage.verifyUserHasSuccesfullyRegisterd();
+        registrationPage.clickOnRegisterButton();
 
 
     }
